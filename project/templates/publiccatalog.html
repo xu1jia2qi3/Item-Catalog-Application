@@ -1,0 +1,25 @@
+{% include "header.html" %}
+
+        <div>
+            <h2>Categories</h2>
+            <ul>
+                {% for i in categories %}
+                <li>
+                <a href = "{{url_for('showCategories', categories_id = i.id)}}">{{i.name}}</a>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+        
+        <h2>Latest Item</h2>
+        <ul>
+            {% for i in items %}
+            <li>
+            <a href = "{{url_for('showItem',categories_id=i.categories_id, items_id=i.id)}}">{{i.name}} - {{i.categories.name}}</a>
+            </li>
+            {% endfor %}
+        </ul>
+            
+          
+    </body>
+</html>
