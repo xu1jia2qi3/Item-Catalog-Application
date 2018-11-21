@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- <link rel=stylesheet type=text/css href="{{ url_for('static', filename='styles.css') }}">
+        <link href='https://fonts.googleapis.com/css?family=Advent Pro' rel='stylesheet'> -->
+    </head>
+    <body>
+        <div>
+            {%if 'username' not in session %}
+            <a href="{{url_for('showLogin')}}">Login </a>
+            {% else %}
+            <a href="{{url_for('gdisconnect')}}">Logout </a>
+            {% endif %}
+        </div>
+        <header>
+        <h1><a href = "{{url_for('showCatalog')}}">Catalog Application</a></h1>
+        </header>
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <ul>
+            {% for message in messages %}
+            <h4><strong>{{message}}</strong></h4>
+            {% endfor %}
+            </ul>
+        {% endif %}
+        {% endwith %}
+
+

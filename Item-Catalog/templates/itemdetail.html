@@ -1,0 +1,32 @@
+{% include "header.html" %}
+
+<div>
+        <h2>Categories</h2>
+        <ul>
+            {% for c in categories %}
+            <li>
+            <a href = "{{url_for('showCategory', category_name = c.name,)}}">{{c.name}}</a>
+            </li>
+            {% endfor %}
+        </ul>
+</div>
+
+           
+<div>
+    
+    <h4>{{ item.name }}</h4>
+    <p>{{ item.description }}</p>
+    <h6><a href = "{{url_for('deleteItem', category_name = item.category.name, item_name = item.name)}}">Delete</a></h6>
+    <h6><a href = "{{url_for('editItem', category_name = item.category.name, item_name = item.name)}}">Edit</a></h6>
+</div>
+             
+                   
+                    
+
+ 
+
+            
+
+        
+</body>
+</html>

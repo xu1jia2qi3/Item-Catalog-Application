@@ -1,0 +1,33 @@
+{% include "header.html" %}
+
+<div>
+    <h2>Categories</h2>
+    <ul>
+        {% for c in categories %}
+        <li>
+        <a href = "{{url_for('showCategory', category_name = c.name,)}}">{{c.name}}</a>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+
+<div>
+        
+
+        <h6><a href = "{{url_for('addItem')}}">Create New Item</a></h6>
+        <h6><a href = "{{url_for('addCategory')}}">Create New Category</a></h6>
+        <h6><a href = "{{url_for('editCategory', category_name = category)}}">Edit Category</a></h6>
+        <h6><a href = "{{url_for('deleteCategory', category_name = category)}}">Delete Category</a></h6>
+
+        <h4 >Latest Items</h4>
+        <ul>
+        {% for i in items %}                    
+            <a href = "{{url_for('showItem', category_name = i.category.name, item_name = i.name)}}">{{ i.name }}                      
+            </a>
+        </ul>
+        {% endfor %}
+</div>
+
+
+</body>
+</html>
