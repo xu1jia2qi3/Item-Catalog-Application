@@ -18,6 +18,14 @@
             <a class="button" href="{{url_for('gdisconnect')}}">Logout </a>
             {% endif %}
         </div>
+        <div>
+            {%if 'username' in session %}
+            <h6 class="button_top button"><a href="{{url_for('addCategory')}}">New Category</a></h6>
+            <h6 class="button_top button"><a href="{{url_for('addItem')}}">New Item</a></h6>
+            {% else %}
+            
+            {% endif %}
+        </div>
 
         {% with messages = get_flashed_messages() %}
         {% if messages %}

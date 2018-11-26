@@ -18,7 +18,8 @@ header {
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background-size: cover;
+	background-size: cover;
+	height: 70px;
 }
 
 nav {
@@ -91,6 +92,10 @@ body {
 	transition-duration: 0.5s;
 	cursor: pointer;
 }
+.button_top {
+	float: right;
+	font-size: 10px;
+}
 
 .button:hover {
 	background-color: #555555;
@@ -115,6 +120,7 @@ body {
 #result {
 	position: absolute;
 	left: 33%;
+	bottom: 0px;
 } 
 .block {
 	padding: 5px;
