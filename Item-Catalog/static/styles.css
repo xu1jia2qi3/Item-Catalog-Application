@@ -1,0 +1,151 @@
+a:link {
+	text-decoration: none;
+}
+
+a:visited {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+header {
+	text-align: center;
+	border-bottom: 2px solid #205dcc;
+	padding: 15px;
+	background: url("backgroud.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+nav {
+	float: left;
+	max-width: 250px;
+	margin: 0;
+	padding: 1em;
+	border-right: 2px solid #205dcc;	
+	min-height: 400px;
+	background: url("2.jpg");
+	background-size: cover;
+	
+	
+}
+
+article {
+	float: left;
+	padding-left: 20px;
+	padding-top: 20px;
+	min-height: 400px;
+	
+}
+
+body {
+	position: absolute;
+	left: 10%;
+	right: 10%;
+	border: 2px solid;
+	padding: 3px;
+	margin: 5px;
+	border-color: #205dcc;
+	font-size: 18px;
+	min-height: 480px;
+	
+}
+
+
+.flash {
+	text-align: center;
+	color:#1611ebdb;
+	font-size: 13px;
+}
+
+.inline {
+	padding-top: 20px;
+	display: inline;
+}
+
+.item {
+	text-align: center;
+	padding-top: 10px;
+}
+
+.description {
+	max-width: 80%;
+	text-align-last: auto;
+	padding-left: 10%;
+}
+
+.button {
+	background-color: white;
+	color: black;
+	border: 2px solid #555555;
+	border-radius: 12px;
+	padding: 4px 14px;
+	text-align: center;
+	font-size: 13px;
+	margin: 4px 2px;
+	-webkit-transition-duration: 0.5s;
+	transition-duration: 0.5s;
+	cursor: pointer;
+}
+
+.button:hover {
+	background-color: #555555;
+	color: white;
+	text-decoration: none;
+}
+
+
+.logo {
+	float: left;
+	padding-left: 30px;
+}
+
+.loginpage {
+	text-align: center;
+	min-height: 550px;
+}
+
+.login {
+	float: right;
+}
+#result {
+	position: absolute;
+	left: 33%;
+} 
+.block {
+	padding: 5px;
+}
+label {
+	background-color: white;
+	color: black;
+	border: 2px solid #555555;
+	border-radius: 12px;
+	padding: 4px 14px;
+	text-align: center;
+	font-size: 13px;
+	margin: 4px 2px;
+	-webkit-transition-duration: 0.5s;
+	transition-duration: 0.5s;
+	cursor: pointer;
+}
+#name {
+	margin-left:33px;
+}
+#category {
+	margin-left:15px;
+}
+#current-picture {
+	max-block-size: 200px;
+}
+#new_name {
+	margin-left:1px;
+}
+.lower_page{
+	background: url("2.jpg");
+	background-size: cover;
+	
+}

@@ -1,23 +1,25 @@
 {% include "header.html" %}
-
-<!-- Page Content -->
-
 <div>
-    <h2>Categories</h2>
-    <ul>
-        {% for c in categories %}
-        <li>
-        <a href = "{{url_for('showCategory', category_name = c.name,)}}">{{c.name}}</a>
-        </li>
-        {% endfor %}
-    </ul>
+        <nav>
+            <h2>Categories</h2>
+            <ul>
+                {% for c in categories %}
+                <li>
+                <a href = "{{url_for('showCategory', category_name = c.name,)}}" style="color:black">{{c.name}}</a>
+                </li>
+                {% endfor %}
+            </ul>
+        </nav>
+
+        <article>
+                <h2>{{ item.name }}</h2>
+                <p>{{ item.description }}</p>
+                <div>
+                    <img src="{{item.picture}}" alt="{{item.picture}}" id="current-picture" >
+                </div>
+                               
+        </article>
 </div>
-        
- <div>
-    <h4>{{ item.name }}</h4>
-    <p>{{ item.description }}</p>
-</div>
-  
 
 </body>
-</html>
+</html> 

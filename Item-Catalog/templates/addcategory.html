@@ -4,12 +4,12 @@
         <h1>Add Category</h1>
 
         <form action="{{url_for('addCategory')}}" method = "post" >
-            <div>
+            <div class= block> 
                 <label for="name">Category Name:</label>
                 <input type ="text" class="form-control" id="name" maxlength="250" name="name">
             </div>
 
-            <div>
+            <div class= block>
                 <button type="submit" id="submit">Save</button>
                 <a href="{{url_for('showCatalog')}}">
                     <button type="button" >Cancel</button>

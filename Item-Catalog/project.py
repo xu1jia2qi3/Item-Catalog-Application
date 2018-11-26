@@ -114,12 +114,12 @@ def gconnect():
     login_session['user_id'] = user_id
 
     output = ''
-    output += '<h1>Welcome, '
+    output += '<h3>Welcome, '
     output += login_session['username']
-    output += '!</h1>'
+    output += '!</h4>'
     output += '<img src="'
     output += login_session['picture']
-    output += ' " style = "width: 300px; height: 300px;border-radius: 150px;-webkit-border-radius: 150px;-moz-border-radius: 150px;"> '
+    output += ' " style = "width: 200px; height: 200px;border-radius: 150px;-webkit-border-radius: 150px;-moz-border-radius: 150px;"> '
     flash("you are now logged in as %s" % login_session['username'])
     return output
 
@@ -305,7 +305,7 @@ def deleteCategory(category_name):
     if request.method =='POST':
         session.delete(categoryToDelete)
         session.commit()
-        flash('Category Successfully Deleted! '+categoryToDelete.name)
+        flash('Category Successfully Deleted!')
         return redirect(url_for('showCatalog'))
     else:
         return render_template('deletecategory.html',
