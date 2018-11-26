@@ -9,7 +9,7 @@
 3. Launch the Vagrant VM (`vagrant up`) in GitDash
 4. Log into Vagrant VM (`vagrant ssh`) in GitDash
 5. Navigate to `cd/vagrant` as instructed in terminal
-6. Then type cd Item-Catalog
+6. Then type cd item-Catalog-Application-master/Item-Catalog
 7. database has already setup and imported the fake data,
 8. Run application using `python project.py`
 9. Access the application locally using http://localhost:8000
