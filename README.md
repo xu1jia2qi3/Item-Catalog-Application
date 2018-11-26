@@ -11,8 +11,8 @@
 5. Navigate to `cd/vagrant` as instructed in terminal
 6. Then type cd Item-Catalog
 7. database has already setup and imported the fake data,
-8 Run application using `python project.py`
-10. Access the application locally using http://localhost:8000
+8. Run application using `python project.py`
+9. Access the application locally using http://localhost:8000
 
 
 
