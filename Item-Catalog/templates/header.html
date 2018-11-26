@@ -1,33 +1,32 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <link rel=stylesheet type=text/css href="{{url_for('static', filename='styles.css') }}">
-        <link href='https://fonts.googleapis.com/css?family=Advent Pro' rel='stylesheet'>
-    </head>
-    <body>
-        <header>
-            <img class="logo" src="{{ url_for('static', filename='logo.png') }}"
-                alt="the logo" height="60" width="60">
 
-            <h1 class="inline"><a href = "{{url_for('showCatalog')}}" style="color:black ">Catalog Application</a></h1>
-            <div class="inline login">
-                {%if 'username' not in session %}
-                <a class="button" href="{{url_for('showLogin')}}">Login </a>
-                {% else %}
-                <a class="button" href="{{url_for('gdisconnect')}}">Logout </a>
-                {% endif %}
-            </div> 
+<head>
+    <link rel=stylesheet type=text/css href="{{url_for('static', filename='styles.css') }}">
+    <link href='https://fonts.googleapis.com/css?family=Advent Pro' rel='stylesheet'>
+</head>
+
+<body>
+    <header>
+        <img class="logo" src="{{ url_for('static', filename='logo.png') }}" alt="the logo" height="60" width="60">
+
+        <h1 class="inline"><a href="{{url_for('showCatalog')}}" style="color:black ">Catalog Application</a></h1>
+        <div class="inline login">
+            {%if 'username' not in session %}
+            <a class="button" href="{{url_for('showLogin')}}">Login </a>
+            {% else %}
+            <a class="button" href="{{url_for('gdisconnect')}}">Logout </a>
+            {% endif %}
+        </div>
 
         {% with messages = get_flashed_messages() %}
         {% if messages %}
-            <ul class="flash">
+        <ul class="flash">
             {% for message in messages %}
             <h4><strong>{{message}}</strong></h4>
             {% endfor %}
-            </ul>
+        </ul>
         {% endif %}
-        {% endwith %}         
+        {% endwith %}
 
-        </header>        
-        
-
+    </header>

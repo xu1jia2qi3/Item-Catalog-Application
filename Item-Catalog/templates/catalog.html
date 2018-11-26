@@ -1,28 +1,30 @@
 {% include "header.html" %}
-    <div>
-        <nav>
-            <h2>Categories</h2>
-            <ul>
-                {% for c in categories %}
-                <li>
-                <a href = "{{url_for('showCategory', category_name = c.name,)}}" style="color:black">{{c.name}}</a>
-                </li>
-                {% endfor %}
-            </ul>
-        </nav>
+<div>
+    <nav>
+        <h2>Categories</h2>
+        <ul>
+            {% for c in categories %}
+            <li>
+                <a href="{{url_for('showCategory', category_name = c.name,)}}" style="color:black">{{c.name}}</a>
+            </li>
+            {% endfor %}
+        </ul>
+    </nav>
 
 
-        <article>
-            <h2 >Latest Items</h2>
-            <ul>
-                {% for i in items %}
-                <li>                    
-                    <a href = "{{url_for('showItem', category_name = i.category.name, item_name = i.name)}}" style="color:black">{{ i.name }}</a>
-                </li>
-                {% endfor %}
-            </ul>
-        </article>
-    </div>
-  
-    </body>
+    <article>
+        <h2>Latest Items</h2>
+        <ul>
+            {% for i in items %}
+            <li>
+                <a href="{{url_for('showItem', category_name = i.category.name, item_name = i.name)}}" style="color:black">{{
+                    i.name }}</a>
+            </li>
+            {% endfor %}
+        </ul>
+    </article>
+</div>
+
+</body>
+
 </html>

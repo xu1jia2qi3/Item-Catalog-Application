@@ -1,18 +1,19 @@
 {% include "header.html" %}
 
 
-        <h1>Delete Item</h1>
-        <p>Are you sure you want to delete item "{{item.name}}"?</p>
+<h1>Delete Item</h1>
+<p>Are you sure you want to delete item "{{item.name}}"?</p>
 
-        <form action="{{url_for('deleteItem', category_name = item.category.name, item_name = item.name)}}" method = "post">
-            <div class= block>
-                <button type="submit" id="submit">Delete</button>
-                <a href="{{url_for('showCategory', category_name = item.category.name)}}">
-                    <button type="button">Cancel</button>
-                </a>
-            </div>
-        </form>
-    
+<form action="{{url_for('deleteItem', category_name = item.category.name, item_name = item.name)}}" method="post">
+    <div class=block>
+        <button type="submit" id="submit">Delete</button>
+        <a href="{{url_for('showCategory', category_name = item.category.name)}}">
+            <button type="button">Cancel</button>
+        </a>
+    </div>
+</form>
+
 
 </body>
+
 </html>

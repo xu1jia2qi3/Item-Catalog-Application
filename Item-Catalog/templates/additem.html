@@ -1,38 +1,39 @@
 {% include "header.html" %}
 
 
-        <h1>New Item</h1>
+<h1>New Item</h1>
 
-        <form action="{{url_for('addItem')}}" method = "post" >
-            <div class= block>
-                <label for="name">Item Name:</label>
-                <input type ="text" id="new_name" maxlength="250" name="name">
-            </div>
-            <div class= block>
-                <label for="description">Description:</label>
-                <textarea name="description" id="description"  maxlength="250" cols="30" rows="3"></textarea>
-            </div>
-            <div class= block>
-                <label for="picture">Picture URL:</label>
-                <input type ="url" id="picture" maxlength="250" name="picture" placeholder="http://www.example.com">
-            </div>
-            <div class= block>
-                <label for="picture">&nbsp&nbspCategory:&nbsp&nbsp</label>
-                <select name="category">
-                {% for c in categories %}
-                    <option value="{{c.name}}">{{c.name}}</option>
-                {% endfor %}
-                </select>
-            </div>
-            <div class= block>
-                <button type="submit">Save</button>
-                <a href="{{url_for('showCatalog')}}">
-                    <button type="button" >Cancel</button>
-                </a>
-            </div>
-        </form>
-    
+<form action="{{url_for('addItem')}}" method="post">
+    <div class=block>
+        <label for="name">Item Name:</label>
+        <input type="text" id="new_name" maxlength="250" name="name">
+    </div>
+    <div class=block>
+        <label for="description">Description:</label>
+        <textarea name="description" id="description" maxlength="250" cols="30" rows="3"></textarea>
+    </div>
+    <div class=block>
+        <label for="picture">Picture URL:</label>
+        <input type="url" id="picture" maxlength="250" name="picture" placeholder="http://www.example.com">
+    </div>
+    <div class=block>
+        <label for="picture">&nbsp&nbspCategory:&nbsp&nbsp</label>
+        <select name="category">
+            {% for c in categories %}
+            <option value="{{c.name}}">{{c.name}}</option>
+            {% endfor %}
+        </select>
+    </div>
+    <div class=block>
+        <button type="submit">Save</button>
+        <a href="{{url_for('showCatalog')}}">
+            <button type="button">Cancel</button>
+        </a>
+    </div>
+</form>
 
-        
+
+
 </body>
+
 </html>

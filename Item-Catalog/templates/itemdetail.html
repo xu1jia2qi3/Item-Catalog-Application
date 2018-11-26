@@ -1,29 +1,30 @@
 {% include "header.html" %}
 <div>
-        <nav>
-            <h2>Categories</h2>
-            <ul>
-                {% for c in categories %}
-                <li>
-                <a href = "{{url_for('showCategory', category_name = c.name,)}}" style="color:black">{{c.name}}</a>
-                </li>
-                {% endfor %}
-            </ul>
-        </nav>
+    <nav>
+        <h2>Categories</h2>
+        <ul>
+            {% for c in categories %}
+            <li>
+                <a href="{{url_for('showCategory', category_name = c.name,)}}" style="color:black">{{c.name}}</a>
+            </li>
+            {% endfor %}
+        </ul>
+    </nav>
 
-        <article>
-                <h2>{{ item.name }}</h2>
-                <p>{{ item.description }}</p>
-                <div>
-                    <img src="{{item.picture}}" alt="{{item.picture}}" id="current-picture" >
-                </div>
-                
-                <div>                    
-                    <h6 class="button"><a href = "{{url_for('editItem', category_name = item.category.name, item_name = item.name)}}">Edit</a></h6>
-                    <h6 class="button"><a href = "{{url_for('deleteItem', category_name = item.category.name, item_name = item.name)}}">Delete</a></h6>
-                </div>
-        </article>
+    <article>
+        <h2>{{ item.name }}</h2>
+        <p>{{ item.description }}</p>
+        <div>
+            <img src="{{item.picture}}" alt="{{item.picture}}" id="current-picture">
+        </div>
+
+        <div>
+            <h6 class="button"><a href="{{url_for('editItem', category_name = item.category.name, item_name = item.name)}}">Edit</a></h6>
+            <h6 class="button"><a href="{{url_for('deleteItem', category_name = item.category.name, item_name = item.name)}}">Delete</a></h6>
+        </div>
+    </article>
 </div>
 
 </body>
-</html> 
+
+</html>

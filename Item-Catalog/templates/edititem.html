@@ -1,43 +1,44 @@
 {% include "header.html" %}
 
-        <h1>Edit Item</h1>
+<h1>Edit Item</h1>
 
-        <form action="{{url_for('editItem', category_name = item.category.name, item_name = item.name)}}" method = "post" >
-            <div class = block>
-                <label for="name">Name:</label>
-                <input id = "name" type ="text" name="name" value="{{item.name}}">
-            </div>
-            <div class = block>
-                <label for="description">Description:</label>
-                <textarea name="description" cols="30" rows="3">{{item.description}}</textarea>
-            </div>
-            <div class = block>
-                <label for="current-picture">Picture:</label>
-            </div>
-            <div class = block>
-                <img src="{{item.picture}}" alt="{{item.picture}}" id="current-picture" class="img-thumbnail">
-            </div>
-            <div class = block>
-                <label for="picture">Picture URL:</label>
-                <input type ="url" name="picture" placeholder="{{item.picture}}" value="{{item.picture}}">
-            </div>
-            <div class = block>
-                <label for="picture">Category:</label>
-                <select id = category name="category">
-                {% for c in categories %}
-                    <option value="{{c.name}}" {% if c == item.category %} selected {% endif %}>{{c.name}}</option>
-                {% endfor %}
-                </select>
-            </div>
-            <div class = block>
-                <button type="submit">Save</button>
-                <a href="{{url_for('showCategory', category_name=item.category.name)}}">
-                    <button type="button">Cancel</button>
-                </a>
-            </div>
-        </form>
-    
+<form action="{{url_for('editItem', category_name = item.category.name, item_name = item.name)}}" method="post">
+    <div class=block>
+        <label for="name">Name:</label>
+        <input id="name" type="text" name="name" value="{{item.name}}">
+    </div>
+    <div class=block>
+        <label for="description">Description:</label>
+        <textarea name="description" cols="30" rows="3">{{item.description}}</textarea>
+    </div>
+    <div class=block>
+        <label for="current-picture">Picture:</label>
+    </div>
+    <div class=block>
+        <img src="{{item.picture}}" alt="{{item.picture}}" id="current-picture" class="img-thumbnail">
+    </div>
+    <div class=block>
+        <label for="picture">Picture URL:</label>
+        <input type="url" name="picture" placeholder="{{item.picture}}" value="{{item.picture}}">
+    </div>
+    <div class=block>
+        <label for="picture">Category:</label>
+        <select id=category name="category">
+            {% for c in categories %}
+            <option value="{{c.name}}" {% if c==item.category %} selected {% endif %}>{{c.name}}</option>
+            {% endfor %}
+        </select>
+    </div>
+    <div class=block>
+        <button type="submit">Save</button>
+        <a href="{{url_for('showCategory', category_name=item.category.name)}}">
+            <button type="button">Cancel</button>
+        </a>
+    </div>
+</form>
+
 
 
 </body>
+
 </html>
