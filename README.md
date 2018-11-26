@@ -6,8 +6,8 @@
 ## How to Install
 1. Install Vagrant & VirtualBox & Gitdash
 2. Go to Vagrant directory and either clone this repo or download and place zip here
-3. Launch the Vagrant VM (`vagrant up`)
-4. Log into Vagrant VM (`vagrant ssh`)
+3. Launch the Vagrant VM (`vagrant up`) in GitDash
+4. Log into Vagrant VM (`vagrant ssh`) in GitDash
 5. Navigate to `cd/vagrant` as instructed in terminal
 6. Then type cd Item-Catalog
 7. database has already setup and imported the fake data,
